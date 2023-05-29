@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<!--Lenguaje en español-->
+<html lang="es">
+<!--HEAD:  Información que afectará a toda la página-->
+
+<head>
+    <!--Codificación de caracteres-->
+    <meta charset="UTF-8">
+    <!--Compatibilidad de exploradores-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!--Permite la visualización correcta entre dispositivos-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Autor de la página web-->
+    <meta name=”author” contet=”Sergio Seva Rayos”>
+    <!--Palabras clave para los motores de búsqueda-->
+    <meta name=“Keywords” content=“Sergio Seva Rayos, guapo, listo, inteligente, buen estudiante”>
+    <!--Descripción de la página web-->
+    <meta name=“description” content=“Posiblemente la persona más trabajadora y capacitada del mundo”>
+    <!--Fabicon para los navegadores-->
+    <link rel="icon" type="image/png" href="media/img/fabicon.png">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+    <script src="js/dinamic.js"></script>
+    <script src="anime.min.js"></script>
+
+    <!--Título de la página-->
+    <title>Práctica porafolio</title>
+</head>
+<!--BODY: Representa el contenido del documeto HTML-->
+
+<body>
+    <div class="contenedor">
+        <!--Header______________________________________-->
+        <header class="header">
+            <h2>SERGIO SEVA RAYOS</h2>
+        </header>
+        <!--Header______________________________________-->
+
+        <!--Sidebar______________________________________-->
+        <aside class="sidebar">
+            <div class="navegacion">
+                <div id="mi-div">
+                    <button class="boton2" type="submit" onclick="prueba()">Tu nombre</button>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <input class="pantalla" type="text" id="dato1" placeholder="Introduce tu nombre">
+                </div>
+                <br>
+                <br>
+                <br>
+                <br>
+                <a class="boton" href="currículum.html">Curriculum</a>
+                <br>
+                <a class="boton" href="portafolio.html">Portafolio</a>
+                <br>
+                <a class="boton" href="contacto.html">Contacto</a>
+                <br>
+                <a class="boton" href="varios.html">Varios</a>
+                <br>
+                <a class="boton" onclick="mensaje()">Mensaje</a>
+                <script>
+                    var el = document.getElementById("mi-div");
+                    anime({
+                        targets: el,
+                        translateX: 300,
+                        duration: 3000
+                    });
+                </script>
+            </div>
+        </aside>
+        <!--Main______________________________________-->
+        <main class="contenido">
+            <div class="clock">
+                <svg class="circle" viewBox="0 0 120 120" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                    <circle class="cir1" cx="60" cy="60" r="60" />
+                    <circle class="cir2" cx="60" cy="60" r="58" />
+                    <line x1="60" y1="15" x2="60" y2="60" class="hours" />
+                    <line x1="60" y1="4" x2="60" y2="60" class="minutes" />
+                    <line x1="60" y1="3" x2="60" y2="60" class="seconds" />
+
+                </svg>
+                <script>
+                    (function () {
+                        calculateHourDegrees();
+                        calculateMinuteDegrees();
+                        calculateSeconds();
+                    })();
+                    function linearMap(value, min, max, newMin, newMax) {
+                        return newMin + ((newMax - newMin) * (value - min)) / (max - min);
+                    }
+                    linearMap(33, 0, 60, 0, 360);
+                    function calculateHourDegrees() {
+                        const currentHour = new Date().getHours() - 12;
+                        const angle = linearMap(currentHour, 0, 12, 0, 360);
+                        document.querySelector(".hours").style.transform = `rotate(${angle}deg)`;
+                    }
+                    function calculateMinuteDegrees() {
+                        const currentMinutes = new Date().getMinutes();
+                        const angle = linearMap(currentMinutes, 0, 60, 0, 360);
+                        document.querySelector(".minutes").style.transform = `rotate(${angle}deg)`;
+                    }
+
+                    function calculateSeconds() {
+                        const currentMinutes = new Date().getSeconds();
+                        const angle = linearMap(currentMinutes, 0, 60, 0, 360);
+                        document.querySelector(".seconds").style.transform = `rotate(${angle}deg)`;
+                    }
+                    (function () {
+                        setInterval(() => {
+                            calculateHourDegrees();
+                            calculateMinuteDegrees();
+                            calculateSeconds();
+                        }, 1000);
+                    })();
+                    function calculateLines() {
+                        const lines = document.querySelectorAll(".line");
+                        const numberLines = lines.length;
+                        for (let i = 0; i < numberLines; i++) {
+                            const line = lines[i];
+                            const angle = linearMap(i, 0, numberLines, 0, 360);
+                            line.style.transform = `rotate(${angle}deg)`;
+                        }
+                    }
+                </script>
+            </div>
+        </main>
+        <!--Main______________________________________-->
+        <!--Sidebar______________________________________-->
+        <!--Footer______________________________________-->
+
+        <footer class="footer" style="text-align: center;">
+            Sergio Seva Rayos - <a href="mailto:sergiosevarayos@gmail.com">@Email</a> - Lenguaje de marcas y
+            sistemas de
+            gestión de información &copy; 2022 -
+            <a href="#top">Ir arriba</a>
+        </footer>
+        <!--Footer______________________________________-->
+
+    </div>
+
+
+    <!--Pie de página-->
+
+</body>
+
+</html>

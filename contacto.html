@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<!--Lenguaje en español-->
+<html lang="es">
+<!--HEAD:  Información que afectará a toda la página-->
+<head>
+    <!--Codificación de caracteres-->
+    <meta charset="UTF-8">
+    <!--Compatibilidad de exploradores-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!--Permite la visualización correcta entre dispositivos-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Autor de la página web-->
+    <meta name=”author” contet=”Sergio Seva Rayos”>
+    <!--Palabras clave para los motores de búsqueda-->
+    <meta name=“Keywords” content=“Sergio Seva Rayos, guapo, listo, inteligente, buen estudiante”>
+    <!--Descripción de la página web-->
+    <meta name=“description” content=“Posiblemente la persona más trabajadora y capacitada del mundo”>
+    <!--Fabicon para los navegadores-->
+    <link rel="icon" type="image/png" href="media/img/fabicon.png">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="js/dinamic.js"></script>
+
+    <!--Título de la página-->
+    <title>Práctica porafolio</title>
+</head>
+<!--BODY: Representa el contenido del documeto HTML-->
+
+<body>
+    <div class="contenedor">
+        <!--Header______________________________________-->
+        <header class="header">
+            <h2>Contacto</h2>
+        </header>
+        <main class="form">
+            <form action="php/form.php" method="post" enctype="multipart/form-data">
+                <!--Dibujo del cuadro alrededor del formulario-->
+                <fieldset>
+                    <!--Texto del cuadro alrededor del formulario-->
+                    <legend>Datos personales</legend>
+                    <!--Sección para el nombre-->
+                    <div>
+                        <!--Etiqueta para el campo nombre-->
+                        <label for="nombre">Nombre:</label>
+                        <!--Campo de datos de entrada-->
+                        <input type="text" name="nombre">
+                    </div>
+                    <!--Salto de línea-->
+                    <br>
+                    <!--Sección para los apellidos-->
+                    <div>
+                        <!--Etiqueta para el campo apellidos-->
+                        <label for="apellidos">Apellidos:</label>
+                        <!--Campo de datos de entrada-->
+                        <input type="text" name="apellidos" placeholder="Apellidos...">
+                    </div>
+                    <!--Salto de línea-->
+                    <br>
+                    <!--Sección para el número de teléfono-->
+                    <div>
+                        <!--Etiqueta para el campo Teléfono-->
+                        <label for="telefono">Teléfono:</label>
+                        <!--Campo de datos de entrada-->
+                        <input type="number" name="telefono">
+                    </div>
+                    <!--Salto de línea-->
+                    <br>
+                    <!--Sección para las observaciones-->
+                    <div>
+                        <!--Area de texto para las observaciones-->
+                        <textarea name="observaciones" id="" cols="90" rows="10" placeholder="Observaciones"></textarea>
+                    </div>
+                </fieldset>
+                <br>
+                <!--Botón para enviar los datos-->
+                <input type="submit" />
+                <!--Botón para resetear los campos del formulario-->
+                <input type="reset" value="Limpiar">
+            </form>
+        </main>
+
+        <aside class="sidebar">
+            <div class="navegacion">
+                <a class="boton" href="currículum.html">Curriculum</a>
+                <br>
+                <a class="boton" href="portafolio.html">Portafolio</a>
+                <br>
+                <a class="boton" href="contacto.html">Contacto</a>
+                <br>
+                <a class="boton" href="varios.html">Varios</a>
+                <br>
+                <a class="boton" onclick="mensaje()">Mensaje</a>
+
+                <script>
+                    var el = document.getElementById("mi-div");
+                    anime({
+                        targets: el,
+                        translateX: 300,
+                        duration: 3000
+                    });
+                </script>
+            </div>
+        </aside>
+        <!--Sidebar______________________________________-->
+        <!--Footer______________________________________-->
+
+        <footer class="footer" style="text-align: center;">
+            Sergio Seva Rayos - <a href="mailto:sergiosevarayos@gmail.com">@Email</a> - Lenguaje de marcas y
+            sistemas de
+            gestión de información &copy; 2022 -
+            <a href="#top">Ir arriba</a>
+        </footer>
+        <!--Footer______________________________________-->
+
+    </div>
+
+
+    <!--Pie de página-->
+
+</body>
+</html>

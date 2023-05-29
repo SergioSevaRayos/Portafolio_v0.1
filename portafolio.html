@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name=”author” contet=”Sergio Seva Rayos”>
+    <meta name=“Keywords” content=“Sergio Seva Rayos, guapo, listo, inteligente, buen estudiante”>
+    <meta name=“description” content=“La mejor persona del mundo”>
+    <link rel="icon" type="image/png" href="media/img/fabicon.png">
+    <link rel="stylesheet" href="style.css">
+    <script src="js/dinamic.js"></script>
+    
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+    <title>Práctica porafolio</title>
+</head>
+
+<body>
+    <div class="contenedor">
+        <!--Header______________________________________-->
+        <header class="header">
+            <h2>Portafolio</h2>
+        </header>
+        <main>
+            <div id="java">
+                <a class="boton" href="#" onclick="aviso()">Java</a>
+            </div>
+        </main>
+        <aside class="sidebar">
+            <div class="navegacion">
+                <a class="boton" href="currículum.html">Curriculum</a>
+                <br>
+                <a class="boton" href="portafolio.html">Portafolio</a>
+                <br>
+                <a class="boton" href="contacto.html">Contacto</a>
+                <br>
+                <a class="boton" href="varios.html">Varios</a>
+                <br>
+                <a class="boton" onclick="mensaje()">Mensaje</a>
+
+                <script>
+                    var el = document.getElementById("mi-div");
+                    anime({
+                        targets: el,
+                        translateX: 300,
+                        duration: 3000
+                    });
+                </script>
+            </div>
+        </aside>
+        <!--Sidebar______________________________________-->
+        <!--Footer______________________________________-->
+
+        <footer class="footer" style="text-align: center;">
+            Sergio Seva Rayos - <a href="mailto:sergiosevarayos@gmail.com">@Email</a> - Lenguaje de marcas y
+            sistemas de
+            gestión de información &copy; 2022 -
+            <a href="#top">Ir arriba</a>
+        </footer>
+        <!--Footer______________________________________-->
+
+    </div>
+
+
+    <!--Pie de página-->
+
+</body>
+
+</html>
